@@ -1,22 +1,23 @@
 {
-  "name": "minimal-repro",
+  "name": "my-desktop-app",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "我的第一个桌面应用",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder --win"
   },
-  "repository": "https://github.com/electron/minimal-repro",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "你的名字",
+  "license": "MIT",
   "devDependencies": {
-    "electron": "^43.1.1"
+    "electron": "^28.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.yourname.myapp",
+    "productName": "我的桌面应用",
+    "win": {
+      "target": "nsis"
+    }
   }
 }
